@@ -80,6 +80,12 @@
 
 
 
+/*position*/
+.m-right-top{
+    position: absolute;
+    top:0;
+    right:0;
+}
 
 
 /*display*/
@@ -100,4 +106,19 @@
 
 .m-black{
     color: #333 !important;
+}
+
+
+.m-mobile-show{
+    display: none !important;
+}
+
+@media screen and (max-width: 768px){
+    .m-mobile-hide{
+        display: none !important;
+    }
+    .m-mobile-show{
+        display: block !important;
+    }
+
 }
