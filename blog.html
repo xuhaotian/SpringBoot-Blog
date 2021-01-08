@@ -211,9 +211,9 @@
     <br>
     <div class="m-padded m-fixed m-right-bottom">
         <div class="ui vertical icon buttons">
-            <button type="button" class="ui toc teal button">Content</button>
-            <a href="#comment-container" class="ui teal button">Comment</a>
-            <button class="ui icon button"><i class="wechat icon"></i></button>
+            <button type="button" class="ui toc teal button"><i class="book icon"></i></button>
+            <a href="#comment-container" class="ui teal button"><i class="comments icon"></i></a>
+            <button class="ui wechatqr icon button"><i class="wechat icon"></i></button>
             <a href="#" class="ui icon button"><i class="chevron up icon"></i></a>
         </div>
     </div>
@@ -222,6 +222,10 @@
         <ol class="js-toc">
 
         </ol>
+    </div>
+
+    <div class="ui wechat-qr flowing popup transition hidden m-padded-mini" style="width: 130px !important;">
+        <img src="./static/images/wechat.png" alt="" class="ui rounded image" style="width: 200px !important">
     </div>
 
 
@@ -289,6 +293,12 @@
 
         $('.toc.button').popup({
             popup : $('.toc-container.popup'),
+            on : 'click',
+            position : 'left center'
+        });
+
+        $('.wechatqr').popup({
+            popup : $('.wechat-qr'),
             on : 'click',
             position : 'left center'
         });
