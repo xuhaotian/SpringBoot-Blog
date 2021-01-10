@@ -1,0 +1,104 @@
+2021-01-11 00:15:06.871  INFO 37408 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-11 00:15:06.873  INFO 37408 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-01-11 00:15:06.876  INFO 37408 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-01-11 00:15:06.881  INFO 37408 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-01-11 00:15:11.789  INFO 37837 --- [main] com.haotian.blog.BlogApplication         : Starting BlogApplication using Java 1.8.0_275 on Haotians-MBP with PID 37837 (/Users/haotian/IdeaProjects/blog/target/classes started by haotian in /Users/haotian/IdeaProjects/blog)
+2021-01-11 00:15:11.791 DEBUG 37837 --- [main] com.haotian.blog.BlogApplication         : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-01-11 00:15:11.791  INFO 37837 --- [main] com.haotian.blog.BlogApplication         : The following profiles are active: dev
+2021-01-11 00:15:12.376  INFO 37837 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-11 00:15:12.390  INFO 37837 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2021-01-11 00:15:12.991  INFO 37837 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-01-11 00:15:13.002  INFO 37837 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-11 00:15:13.002  INFO 37837 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-11 00:15:13.075  INFO 37837 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-11 00:15:13.076  INFO 37837 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1254 ms
+2021-01-11 00:15:13.271  INFO 37837 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-11 00:15:13.312  INFO 37837 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-01-11 00:15:13.422  INFO 37837 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-01-11 00:15:13.480  INFO 37837 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-01-11 00:15:13.482  WARN 37837 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-01-11 00:15:13.595  INFO 37837 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-01-11 00:15:13.610  INFO 37837 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-01-11 00:15:13.757  INFO 37837 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-11 00:15:13.766  INFO 37837 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-11 00:15:13.883  WARN 37837 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-11 00:15:14.095  INFO 37837 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-11 00:15:14.198  INFO 37837 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-01-11 00:15:14.391  INFO 37837 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-11 00:15:14.398  INFO 37837 --- [main] com.haotian.blog.BlogApplication         : Started BlogApplication in 3.008 seconds (JVM running for 3.564)
+2021-01-11 00:15:16.937  INFO 37837 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-11 00:15:16.937  INFO 37837 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-11 00:15:16.939  INFO 37837 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-01-11 00:16:26.848  INFO 37837 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-11 00:16:26.848  INFO 37837 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-01-11 00:16:26.850  INFO 37837 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-01-11 00:16:26.856  INFO 37837 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-01-11 00:16:33.049  INFO 37906 --- [main] com.haotian.blog.BlogApplication         : Starting BlogApplication using Java 1.8.0_275 on Haotians-MBP with PID 37906 (/Users/haotian/IdeaProjects/blog/target/classes started by haotian in /Users/haotian/IdeaProjects/blog)
+2021-01-11 00:16:33.051 DEBUG 37906 --- [main] com.haotian.blog.BlogApplication         : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-01-11 00:16:33.051  INFO 37906 --- [main] com.haotian.blog.BlogApplication         : The following profiles are active: dev
+2021-01-11 00:16:33.592  INFO 37906 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-11 00:16:33.605  INFO 37906 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2021-01-11 00:16:34.185  INFO 37906 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-01-11 00:16:34.192  INFO 37906 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-11 00:16:34.193  INFO 37906 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-11 00:16:34.262  INFO 37906 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-11 00:16:34.263  INFO 37906 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1176 ms
+2021-01-11 00:16:34.464  INFO 37906 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-11 00:16:34.502  INFO 37906 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-01-11 00:16:34.624  INFO 37906 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-01-11 00:16:34.688  INFO 37906 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-01-11 00:16:34.689  WARN 37906 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-01-11 00:16:34.803  INFO 37906 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-01-11 00:16:34.821  INFO 37906 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-01-11 00:16:34.964  INFO 37906 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-11 00:16:34.971  INFO 37906 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-11 00:16:35.142  WARN 37906 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-11 00:16:35.366  INFO 37906 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-11 00:16:35.466  INFO 37906 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-01-11 00:16:35.672  INFO 37906 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-11 00:16:35.681  INFO 37906 --- [main] com.haotian.blog.BlogApplication         : Started BlogApplication in 3.087 seconds (JVM running for 3.576)
+2021-01-11 00:16:36.079  INFO 37906 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-11 00:16:36.080  INFO 37906 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-11 00:16:36.081  INFO 37906 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-01-11 00:16:44.970  INFO 37906 --- [http-nio-8080-exec-2] com.haotian.blog.aspect.LogAspect        : ---------doBefore-------
+2021-01-11 00:16:44.981  INFO 37906 --- [http-nio-8080-exec-2] com.haotian.blog.aspect.LogAspect        : Result : {}index
+2021-01-11 00:16:44.981  INFO 37906 --- [http-nio-8080-exec-2] com.haotian.blog.aspect.LogAspect        : ---------doAfter-------
+2021-01-11 00:25:07.270  INFO 37906 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-11 00:25:07.271  INFO 37906 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-01-11 00:25:07.273  INFO 37906 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-01-11 00:25:07.278  INFO 37906 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-01-11 00:25:18.351  INFO 38013 --- [main] com.haotian.blog.BlogApplication         : Starting BlogApplication using Java 1.8.0_275 on Haotians-MBP with PID 38013 (/Users/haotian/IdeaProjects/blog/target/classes started by haotian in /Users/haotian/IdeaProjects/blog)
+2021-01-11 00:25:18.353 DEBUG 38013 --- [main] com.haotian.blog.BlogApplication         : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-01-11 00:25:18.354  INFO 38013 --- [main] com.haotian.blog.BlogApplication         : The following profiles are active: dev
+2021-01-11 00:25:18.867  INFO 38013 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-11 00:25:18.880  INFO 38013 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2021-01-11 00:25:19.620  INFO 38013 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-01-11 00:25:19.632  INFO 38013 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-11 00:25:19.632  INFO 38013 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-11 00:25:20.028  INFO 38013 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-11 00:25:20.028  INFO 38013 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1636 ms
+2021-01-11 00:25:20.222  INFO 38013 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-11 00:25:20.259  INFO 38013 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-01-11 00:25:20.424  INFO 38013 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-01-11 00:25:20.495  INFO 38013 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-01-11 00:25:20.496  WARN 38013 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-01-11 00:25:20.615  INFO 38013 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-01-11 00:25:20.629  INFO 38013 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-01-11 00:25:20.773  INFO 38013 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-11 00:25:20.781  INFO 38013 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-11 00:25:20.889  WARN 38013 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-11 00:25:21.089  INFO 38013 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-11 00:25:21.185  INFO 38013 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-01-11 00:25:21.499  INFO 38013 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-11 00:25:21.508  INFO 38013 --- [main] com.haotian.blog.BlogApplication         : Started BlogApplication in 3.588 seconds (JVM running for 4.172)
+2021-01-11 00:25:22.499  INFO 38013 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-11 00:25:22.499  INFO 38013 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-11 00:25:22.500  INFO 38013 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-01-11 00:25:22.582  INFO 38013 --- [http-nio-8080-exec-1] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/3/Hello', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.IndexController,index', args=[3, Hello]}
+2021-01-11 00:25:22.591  INFO 38013 --- [http-nio-8080-exec-1] com.haotian.blog.aspect.LogAspect        : Result : index
+2021-01-11 00:25:39.138  INFO 38013 --- [http-nio-8080-exec-2] com.haotian.blog.aspect.LogAspect        : Request : {url='http://127.0.0.1:8080/3/Hello', ip='127.0.0.1', classMethod='com.haotian.blog.web.IndexController,index', args=[3, Hello]}
+2021-01-11 00:25:39.139  INFO 38013 --- [http-nio-8080-exec-2] com.haotian.blog.aspect.LogAspect        : Result : index
+2021-01-11 00:29:47.673  INFO 38013 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-11 00:29:47.675  INFO 38013 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-01-11 00:29:47.677  INFO 38013 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-01-11 00:29:47.682  INFO 38013 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
