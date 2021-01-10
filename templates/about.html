@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
-    <title>Admin Panel</title>
+    <title>About</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <link rel="stylesheet" href="../static/css/style.css">
 
@@ -15,20 +15,16 @@
         <!--menu item-->
         <div class="ui inverted secondary stackable menu">
             <h2 class="ui teal header item">Blog</h2>
-            <a href="#" class="active m-item item m-mobile-hide"><i class="small home icon"></i>Blogs</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="small home icon"></i>Home</a>
             <a href="#" class="m-item item m-mobile-hide"><i class="small idea icon"></i>Categories</a>
             <a href="#" class="m-item item m-mobile-hide"><i class="small tags icon"></i>Tags</a>
-            <!--user icon-->
-            <div class="right m-item m-mobile-hide menu">
-                <div class="ui dropdown item">
-                    <div class="text">
-                        <img src="https://picsum.photos/100/100?image=103" alt="" class="ui avatar image">
-                        Admin
-                    </div>
-                    <i class="dropdown icon"></i>
-                    <div class="menu">
-                        <a href="#" class="item">Logout</a>
-                    </div>
+            <a href="#" class="m-item item m-mobile-hide"><i class="small clone icon"></i>Archive</a>
+            <a href="#" class="active m-item item m-mobile-hide"><i class="small info icon"></i>About</a>
+            <!--search bar-->
+            <div class="right item m-mobile-hide">
+                <div class="ui icon inverted transparent input">
+                    <input type="text" placeholder="Search..."></input>
+                    <i class="search link icon"></i>
                 </div>
             </div>
         </div>
@@ -37,83 +33,51 @@
         <i class="sidebar icon"></i>
     </a>
 </nav>
-<div class="ui attached pointing menu">
-    <div class="ui container">
-        <div class="right menu">
-            <a href="#" class="item">Post</a>
-            <a href="#" class="active item">List</a>
-        </div>
-    </div>
-</div>
 
 <!--    content-->
 <div class="m-container-small m-padded-tb-large">
     <div class="ui container">
-        <form action="#" method="post" class="ui segment form">
-            <div class="inline fields">
-                <div class="field">
-                    <input type="text" name="title" placeholder="Title">
+        <div class="ui stackable grid">
+            <!--left-->
+            <div class="eleven wide column">
+                <div class="ui segment">
+                    <img src="https://picsum.photos/800/600" alt="" class="ui rounded image">
                 </div>
-                <div class="field">
-                    <div class="ui selection dropdown">
-                        <input type="hidden" name="categories">
-                        <i class="dropdown icon"></i>
-                        <div class="default text">Categories</div>
-                        <div class="menu">
-                            <div class="item" data-value="1">Tech</div>
-                            <div class="item" data-value="2">Learn</div>
-                            <div class="item" data-value="3">Gym</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui checkbox">
-                        <input type="checkbox" id="recommend" name="recommend">
-                        <label for="recommend">Recommend</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <button class="ui small teal basic button"><i class="search icon"></i>Search</button>
-                </div>
-
             </div>
-        </form>
-        <table class="ui celled table">
-            <thead>
-            <tr>
-                <th></th>
-                <th>Title</th>
-                <th>Category</th>
-                <th>Recommended</th>
-                <th>Date</th>
-                <th>Action</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>1</td>
-                <td>Blog Title</td>
-                <td>Tech</td>
-                <td>Yes</td>
-                <td>01/01/2021</td>
-                <td>
-                    <a href="#" class="ui mini teal basic button">Edit</a>
-                    <a href="#" class="ui mini red basic button">Delete</a>
-                </td>
-            </tr>
-            </tbody>
-            <tfoot>
-            <tr>
-                <th colspan="6">
-                    <div class="ui small pagination menu">
-                        <a class="item">Last Page</a>
-                        <a class="item">Next Page</a>
-                    </div>
-                    <a href="#" class="ui small right floated teal button">New Blog</a>
-                </th>
-            </tr>
-            </tfoot>
-        </table>
+            <!--right-->
+            <div class="five wide column">
+                <div class="ui top attached segment">
+                    <div class="ui header">Who am I?</div>
+                </div>
+                <div class="ui attached segment">
+                    <p class="m-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. <br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                </div>
+                <div class="ui attached segment">
+                    <div class="ui orange basic label m-margin-tb-tiny">Programming</div>
+                    <div class="ui orange basic label m-margin-tb-tiny">Front-end</div>
+                    <div class="ui orange basic label m-margin-tb-tiny">Back-end</div>
+                    <div class="ui orange basic label m-margin-tb-tiny">Sporting</div>
+                </div>
+                <div class="ui attached segment">
+                    <div class="ui teal basic label m-margin-tb-tiny">Java</div>
+                    <div class="ui teal basic label m-margin-tb-tiny">Python</div>
+                    <div class="ui teal basic label m-margin-tb-tiny">JavaScript</div>
+                    <div class="ui teal basic label m-margin-tb-tiny">SQL</div>
+                    <div class="ui teal basic label m-margin-tb-tiny">DevOps</div>
+                </div>
+                <div class="ui bottom attached segment">
+                    <a href="#" class="ui github circular icon button" data-content="xuhaotian"><i class="github icon"></i></a>
+                    <a href="#" class="ui circular icon button"><i class="facebook icon"></i></a>
+                    <a href="#" class="ui circular icon button"><i class="twitter icon"></i></a>
+                    <a href="#" class="ui circular icon button"><i class="linkedin icon"></i></a>
+                    <a href="#" class="ui wechat circular icon button"><i class="wechat icon"></i></a>
+                </div>
+                <div class="ui wechat-qr flowing popup transition hidden">
+                    <img src="../static/images/wechat.png" alt="" class="ui rounded image" style="width: 200px">
+                </div>
+                
+            </div>
+        </div>
     </div>
 </div>
 <br>
@@ -162,9 +126,13 @@
     $('.menu.toggle').click(function (){
         $('.m-item').toggleClass('m-mobile-hide');
     });
+    $('.github').popup();
+    $('.wechat').popup({
+        popup : $('.wechat-qr'),
+        on : 'hover',
+        position : 'bottom center'
+    });
 
-
-    $('.ui.dropdown').dropdown({on:'hover'});
 </script>
 </body>
 </html>
