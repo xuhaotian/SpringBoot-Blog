@@ -8,10 +8,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Controller
 public class IndexController {
 
+
     @GetMapping("/")
+//    public String index(@PathVariable Integer id, @PathVariable String name) {
     public String index() {
-//test error
-//  public String index(@PathVariable Integer id, @PathVariable String name) {
+        //test error
 //        int i = 9/0;
 //        String blog =null;
 //        if(blog ==null){
@@ -25,5 +26,25 @@ public class IndexController {
     public String blog() {
 //        System.out.println("------------blog------------");
         return "blog";
+    }
+
+    @GetMapping("/categories")
+    public String categories() {
+        return "categories";
+    }
+
+    @GetMapping("/tags")
+    public String tags() {
+        return "tags";
+    }
+
+    @GetMapping("/archives")
+    public String archives() {
+        return "archives";
+    }
+
+    @GetMapping("/about")
+    public String about() {
+        return "about";
     }
 }
