@@ -1,5 +1,7 @@
 package com.haotian.blog.po;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +13,7 @@ public class Type {
     @Id
     @GeneratedValue
     private Long id;
+    @NotBlank(message = "Error: Category name cannot be empty")
     private String name;
 
     @OneToMany(mappedBy = "type")

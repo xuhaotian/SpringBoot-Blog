@@ -40,8 +40,8 @@
 <div class="ui attached pointing menu">
     <div class="ui container">
         <div class="right menu">
-            <a href="#" class="item">Post</a>
-            <a href="#" class="active item">List</a>
+            <a href="#" th:href="@{/admin/types/input}" class="item">New</a>
+            <a href="#" th:href="@{/admin/types}"  class="active item">List</a>
         </div>
     </div>
 </div>
@@ -49,6 +49,11 @@
 <!--    content-->
 <div class="m-container-small m-padded-tb-large">
     <div class="ui container">
+        <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
+            <i class="close icon"></i>
+            <div class="header">Message：</div>
+            <p th:text="${message}">Success!</p>
+        </div>
         <table class="ui celled table">
             <thead>
             <tr>
@@ -70,9 +75,9 @@
             <tfoot>
             <tr>
                 <th colspan="6">
-                    <div class="ui small pagination menu">
-                        <a th:href="@{/admin/types/{id}/(page=${page.number}-1)}" class="item">Last Page</a>
-                        <a th:href="@{/admin/types/{id}/(page=${page.number}+1)}" class="item">Next Page</a>
+                    <div class="ui small pagination menu" th:if="${page.totalPages} > 1">
+                        <a th:href="@{/admin/types/(page=${page.number}-1)}" class="item" th:unless="${page.first}">Last Page</a>
+                        <a th:href="@{/admin/types/(page=${page.number}+1)}" class="item" th:unless="${page.last}">Next Page</a>
                     </div>
                     <a href="#" th:href="@{/admin/types/input}" class="ui small right floated teal button">New Category</a>
                 </th>
@@ -132,6 +137,14 @@
 
 
     $('.ui.dropdown').dropdown({on:'hover'});
+
+    //close message
+    $('.message .close')
+        .on('click', function () {
+            $(this)
+                .closest('.message')
+                .transition('fade');
+        });
 </script>
 </body>
 </html>

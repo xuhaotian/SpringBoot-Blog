@@ -29,6 +29,11 @@ public class TypeServiceImpl implements TypeService{
         //after spring 2.x, findOne is disabled
     }
 
+    @Override
+    public Type getTypeByName(String name) {
+        return typeRepository.findByName(name);
+    }
+
     @Transactional
     @Override
     public Page<Type> listType(Pageable pageable) {
