@@ -49,20 +49,23 @@
 <!--    content-->
 <div class="m-container-small m-padded-tb-large">
     <div class="ui container">
-        <form action="#" method="post" class="ui segment form">
+        <div class="ui secondary segment form">
+            <input type="hidden" name="page">
             <div class="inline fields">
                 <div class="field">
                     <input type="text" name="title" placeholder="Title">
                 </div>
                 <div class="field">
                     <div class="ui selection dropdown">
-                        <input type="hidden" name="categories">
+                        <input type="hidden" name="typeId">
                         <i class="dropdown icon"></i>
                         <div class="default text">Categories</div>
                         <div class="menu">
-                            <div class="item" data-value="1">Tech</div>
+                            <div th:each="type : ${types}"  class="item" data-value="1" th:data-value="${type.id}" th:text="${type.name}">Tech</div>
+                            <!--/*-->
                             <div class="item" data-value="2">Learn</div>
                             <div class="item" data-value="3">Gym</div>
+                            <!--*/-->
                         </div>
                     </div>
                 </div>
@@ -73,12 +76,13 @@
                     </div>
                 </div>
                 <div class="field">
-                    <button class="ui small teal basic button"><i class="search icon"></i>Search</button>
+                    <button type="button" id="search-btn" class="ui small teal basic button"><i class="search icon"></i>Search</button>
                 </div>
 
             </div>
-        </form>
-        <table class="ui celled table">
+        </div>
+        <div id="table-container">
+            <table th:fragment="blogList" class="ui compact teal table">
             <thead>
             <tr>
                 <th></th>
@@ -90,30 +94,31 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>1</td>
-                <td>Blog Title</td>
-                <td>Tech</td>
-                <td>Yes</td>
-                <td>01/01/2021</td>
+            <tr th:each="blog,iterStat : ${page.content}">
+                <td th:text="${iterStat.count}}">1</td>
+                <td th:text="${blog.title}">Blog Title</td>
+                <td th:text="${blog.type.name}">Tech</td>
+                <td th:text="${blog.recommend} ? 'Yes':'No'">Yes</td>
+                <td th:text="${blog.updateTime}">01/01/2021</td>
                 <td>
-                    <a href="#" class="ui mini teal basic button">Edit</a>
-                    <a href="#" class="ui mini red basic button">Delete</a>
+                    <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" class="ui mini teal basic button">Edit</a>
+                    <a href="#" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}" class="ui mini red basic button">Delete</a>
                 </td>
             </tr>
             </tbody>
             <tfoot>
             <tr>
                 <th colspan="6">
-                    <div class="ui small pagination menu">
-                        <a class="item">Last Page</a>
-                        <a class="item">Next Page</a>
+                    <div class="ui small pagination menu" th:if="${page.totalPages}>1">
+                        <a onclick="page(this)" th:attr="date-page=${page.number}-1" class="item" th:unless="${page.first}">Last Page</a>
+                        <a onclick="page(this)" th:attr="date-page=${page.number}+1" class="item" th:unless="${page.first}">Next Page</a>
                     </div>
                     <a href="#" class="ui small right floated teal button">New Blog</a>
                 </th>
             </tr>
             </tfoot>
         </table>
+        </div>
     </div>
 </div>
 <br>
@@ -155,7 +160,7 @@
         <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright© 2020-2021 Haotian Xu. MIT License</p>
     </div>
 </footer>
-<!--/*/<th:block th:replace="_fragments :: script">/*/-->
+<!--/*/<th:block th:replace="admin/_fragments :: script">/*/-->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 <!--/*/</th:block>/*/-->
@@ -167,6 +172,25 @@
 
 
     $('.ui.dropdown').dropdown({on:'hover'});
+
+    function page(obj) {
+        $("[name='page']").val($(obj).data("page"));
+        loaddata();
+    }
+
+    $("#search-btn").click(function () {
+        $("[name='page']").val(0);
+        loaddata();
+    });
+    function loaddata() {
+        $("#table-container").load(/*[[@{/admin/blogs/search}]]*/"/admin/blogs/search",{
+            title : $("[name='title']").val(),
+            typeId : $("[name='typeId']").val(),
+            recommend : $("[name='recommend']").prop('checked'),
+            page : $("[name='page']").val()
+        });
+    }
+
 </script>
 </body>
 </html>
