@@ -95,10 +95,11 @@
             </thead>
             <tbody>
             <tr th:each="blog,iterStat : ${page.content}">
-                <td th:text="${iterStat.count}}">1</td>
+                <td th:text="${iterStat.count}">1</td>
                 <td th:text="${blog.title}">Blog Title</td>
                 <td th:text="${blog.type.name}">Tech</td>
                 <td th:text="${blog.recommend} ? 'Yes':'No'">Yes</td>
+                <td th:text="${blog.published} ? 'Unpublished':'Published'">Unpublished</td>
                 <td th:text="${blog.updateTime}">01/01/2021</td>
                 <td>
                     <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" class="ui mini teal basic button">Edit</a>
@@ -108,16 +109,21 @@
             </tbody>
             <tfoot>
             <tr>
-                <th colspan="6">
+                <th colspan="7">
                     <div class="ui small pagination menu" th:if="${page.totalPages}>1">
                         <a onclick="page(this)" th:attr="date-page=${page.number}-1" class="item" th:unless="${page.first}">Last Page</a>
                         <a onclick="page(this)" th:attr="date-page=${page.number}+1" class="item" th:unless="${page.first}">Next Page</a>
                     </div>
-                    <a href="#" class="ui small right floated teal button">New Blog</a>
+                    <a href="#" th:href="@{/admin/blogs/input}" class="ui small right floated teal button">New Blog</a>
                 </th>
             </tr>
             </tfoot>
-        </table>
+            </table>
+            <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
+                <i class="close icon"></i>
+                <div class="header">Tip:</div>
+                <p th:text="${message}">Success</p>
+            </div>
         </div>
     </div>
 </div>
@@ -172,6 +178,14 @@
 
 
     $('.ui.dropdown').dropdown({on:'hover'});
+
+    //initial close message
+    $('.message .close')
+        .on('click', function () {
+            $(this)
+                .closest('.message')
+                .transition('fade');
+        });
 
     function page(obj) {
         $("[name='page']").val($(obj).data("page"));
