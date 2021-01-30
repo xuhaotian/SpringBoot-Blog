@@ -76,8 +76,8 @@
           <tr>
             <th colspan="6" >
               <div class="ui mini pagination menu" th:if="${page.totalPages}>1">
-                <a th:href="@{/admin/tags(page=${page.number}-1)}" class="  item" th:unless="${page.first}">Last Page</a>
-                <a th:href="@{/admin/tags(page=${page.number}+1)}" class=" item" th:unless="${page.last}">Next Page</a>
+                <a th:href="@{/admin/tags(page=${page.number}-1)}" class="item" th:unless="${page.first}">Last Page</a>
+                <a th:href="@{/admin/tags(page=${page.number}+1)}" class="item" th:unless="${page.last}">Next Page</a>
               </div>
               <a href="#" th:href="@{/admin/tags/input}"  class="ui mini right floated teal basic button">New Tag</a>
             </th>

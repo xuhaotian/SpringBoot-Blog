@@ -40,8 +40,8 @@
 <div class="ui attached pointing menu">
     <div class="ui container">
         <div class="right menu">
-            <a href="#" class="item">Post</a>
-            <a href="#" class="active item">List</a>
+            <a href="#" th:href="@{/admin/blogs/input}" class=" item">New</a>
+            <a href="#" th:href="@{/admin/blogs}" class="teal active item">List</a>
         </div>
     </div>
 </div>
@@ -93,6 +93,7 @@
                 <th>Title</th>
                 <th>Category</th>
                 <th>Recommended</th>
+                <th>Status</th>
                 <th>Date</th>
                 <th>Action</th>
             </tr>
@@ -103,7 +104,7 @@
                 <td th:text="${blog.title}">Blog Title</td>
                 <td th:text="${blog.type.name}">Tech</td>
                 <td th:text="${blog.recommend} ? 'Yes':'No'">Yes</td>
-                <td th:text="${blog.published} ? 'Unpublished':'Published'">Unpublished</td>
+                <td th:text="${blog.published} ? 'Published':'Unpublished'">Unpublished</td>
                 <td th:text="${blog.updateTime}">01/01/2021</td>
                 <td>
                     <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" class="ui mini teal basic button">Edit</a>
@@ -114,7 +115,7 @@
             <tfoot>
             <tr>
                 <th colspan="7">
-                    <div class="ui small pagination menu" th:if="${page.totalPages}>1" >
+                    <div class="ui mini pagination menu" th:if="${page.totalPages}>1" >
                         <a onclick="page(this)" th:attr="date-page=${page.number}-1" class="item" th:unless="${page.first}">Last Page</a>
                         <a onclick="page(this)" th:attr="date-page=${page.number}+1" class="item" th:unless="${page.first}">Next Page</a>
                     </div>
