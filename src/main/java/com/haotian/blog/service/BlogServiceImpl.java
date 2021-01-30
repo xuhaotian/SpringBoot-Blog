@@ -4,6 +4,7 @@ import com.haotian.blog.NotFoundException;
 import com.haotian.blog.dao.BlogRepository;
 import com.haotian.blog.po.Blog;
 import com.haotian.blog.po.Type;
+import com.haotian.blog.util.MyBeanUtils;
 import com.haotian.blog.vo.BlogQuery;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -74,7 +75,7 @@ public class BlogServiceImpl implements BlogService {
         if (b == null){
             throw new NotFoundException("Blog not exist");
         }
-        BeanUtils.copyProperties(blog,b);
+        BeanUtils.copyProperties(blog,b, MyBeanUtils.getNullPropertyNames(blog));
         return blogRepository.save(b);
     }
 
