@@ -308,13 +308,13 @@
                                         <i class="idea icon"></i>types
                                     </div>
                                     <div class="right aligned column">
-                                        <a href="#" target="_blank">More <i class="angle double right icon"></i> </a>
+                                        <a href="#" th:href="@{types/-1}" target="_blank">More <i class="angle double right icon"></i> </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="ui teal segment">
                                 <div class="ui fluid vertical menu">
-                                    <a href="#" class="item" th:each="type : ${types}">
+                                    <a href="#" th:href="@{/types/{id}(id=${type.id})}" target="_blank" class="item"  th:each="type : ${types}">
                                         <span th:text="${type.name}">Tech</span>
                                         <div class="ui teal basic left pointing label" th:text="${#arrays.length(type.blogs)}">3</div>
                                     </a>
@@ -338,14 +338,17 @@
                                         <i class="tags icon"></i>Tags
                                     </div>
                                     <div class="right aligned column">
-                                        <a href="#" target="_blank">More <i class="angle double right icon"></i> </a>
+                                        <a href="#" th:href="@{tags/-1}" target="_blank">More <i class="angle double right icon"></i> </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="ui teal segment">
-                                <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny" th:each="tag : ${tags}">
-                                    <span th:text="${tag.name}">Java</span>
-                                    <div class="detail" th:text="${#arrays.length(tag.blogs)}">3</div>
+<!--                                <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny" th:each="tag : ${tags}">-->
+<!--                                    <span th:text="${tag.name}">Java</span>-->
+<!--                                    <div class="detail" th:text="${#arrays.length(tag.blogs)}">3</div>-->
+<!--                                </a>-->
+                                <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny" th:each="tag : ${tags}">
+                                    <span th:text="${tag.name}">Java</span> <div class="detail" th:text="${#arrays.length(tag.blogs)}">3</div>
                                 </a>
                                 <!--/*-->
                                 <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">Python <div class="detail">3</div> </a>
