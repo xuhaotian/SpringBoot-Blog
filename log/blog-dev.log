@@ -955,3 +955,410 @@ org.springframework.dao.InvalidDataAccessApiUsageException: Sort expression 'blo
 2021-01-31 17:27:28.879  INFO 37870 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2021-01-31 17:27:28.882  INFO 37870 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2021-01-31 17:27:28.887  INFO 37870 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-01-31 18:25:14.038  INFO 66350 --- [main] com.haotian.blog.BlogApplication         : Starting BlogApplication using Java 1.8.0_275 on Haotians-MBP with PID 66350 (/Users/haotian/IdeaProjects/blog/target/classes started by haotian in /Users/haotian/IdeaProjects/blog)
+2021-01-31 18:25:14.041 DEBUG 66350 --- [main] com.haotian.blog.BlogApplication         : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-01-31 18:25:14.041  INFO 66350 --- [main] com.haotian.blog.BlogApplication         : The following profiles are active: dev
+2021-01-31 18:25:14.600  INFO 66350 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-31 18:25:14.655  INFO 66350 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 5 JPA repository interfaces.
+2021-01-31 18:25:15.165  INFO 66350 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-01-31 18:25:15.173  INFO 66350 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-31 18:25:15.173  INFO 66350 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-31 18:25:15.236  INFO 66350 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-31 18:25:15.237  INFO 66350 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1162 ms
+2021-01-31 18:25:15.394  INFO 66350 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-31 18:25:15.464  INFO 66350 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-01-31 18:25:15.568  INFO 66350 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-01-31 18:25:15.621  INFO 66350 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-01-31 18:25:15.761  INFO 66350 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-01-31 18:25:15.773  INFO 66350 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-01-31 18:25:16.365  INFO 66350 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-31 18:25:16.371  INFO 66350 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-31 18:25:17.085  WARN 66350 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-31 18:25:17.245  INFO 66350 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-31 18:25:17.348  INFO 66350 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-01-31 18:25:17.563  INFO 66350 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-31 18:25:17.573  INFO 66350 --- [main] com.haotian.blog.BlogApplication         : Started BlogApplication in 3.896 seconds (JVM running for 4.367)
+2021-01-31 18:25:21.515  INFO 66350 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-31 18:25:21.515  INFO 66350 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-31 18:25:21.516  INFO 66350 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-01-31 18:25:21.546  INFO 66350 --- [http-nio-8080-exec-1] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.IndexController,index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2021-01-31 18:25:21.633  WARN 66350 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-01-31 18:25:21.644  WARN 66350 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-01-31 18:25:21.650  INFO 66350 --- [http-nio-8080-exec-1] com.haotian.blog.aspect.LogAspect        : Result : index
+2021-01-31 18:25:25.649  INFO 66350 --- [http-nio-8080-exec-6] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/blog/30', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.IndexController,blog', args=[30, {}]}
+2021-01-31 18:25:25.688  INFO 66350 --- [http-nio-8080-exec-6] com.haotian.blog.aspect.LogAspect        : Result : blog
+2021-01-31 18:25:43.526  INFO 66350 --- [http-nio-8080-exec-9] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.CommentController,post', args=[Comment{id=null, nickname='Haotian', email='haotian@test.com', content='测试', avatar='null', createTime=null}]}
+2021-01-31 18:25:43.599  INFO 66350 --- [http-nio-8080-exec-9] com.haotian.blog.aspect.LogAspect        : Result : redirect:/comments/30
+2021-01-31 18:25:43.616  INFO 66350 --- [http-nio-8080-exec-2] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/comments/30', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.CommentController,comments', args=[30, {}]}
+2021-01-31 18:25:43.629 ERROR 66350 --- [http-nio-8080-exec-2] c.h.b.h.ControllerExceptionHandler       : Request URL : /comments/30, Exception : {}
+
+org.springframework.data.mapping.PropertyReferenceException: No property creatTime found for type Comment! Did you mean 'createTime'?
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:90)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:437)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:413)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:366)
+	at java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:324)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:348)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:331)
+	at org.springframework.data.jpa.repository.query.QueryUtils.toJpaOrder(QueryUtils.java:607)
+	at org.springframework.data.jpa.repository.query.QueryUtils.toOrders(QueryUtils.java:560)
+	at org.springframework.data.jpa.repository.query.JpaQueryCreator.complete(JpaQueryCreator.java:199)
+	at org.springframework.data.jpa.repository.query.JpaQueryCreator.complete(JpaQueryCreator.java:152)
+	at org.springframework.data.jpa.repository.query.JpaQueryCreator.complete(JpaQueryCreator.java:59)
+	at org.springframework.data.repository.query.parser.AbstractQueryCreator.createQuery(AbstractQueryCreator.java:95)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery$QueryPreparer.createQuery(PartTreeJpaQuery.java:232)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.doCreateQuery(PartTreeJpaQuery.java:106)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.createQuery(AbstractJpaQuery.java:227)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$CollectionExecution.doExecute(JpaQueryExecution.java:126)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:88)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:155)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:143)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:152)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:131)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:145)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at com.sun.proxy.$Proxy108.findByBlogId(Unknown Source)
+	at com.haotian.blog.service.CommentServiceImpl.listCommentByBlogId(CommentServiceImpl.java:22)
+	at com.haotian.blog.service.CommentServiceImpl$$FastClassBySpringCGLIB$$f143bff8.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:687)
+	at com.haotian.blog.service.CommentServiceImpl$$EnhancerBySpringCGLIB$$c433b4a8.listCommentByBlogId(<generated>)
+	at com.haotian.blog.web.CommentController.comments(CommentController.java:30)
+	at com.haotian.blog.web.CommentController$$FastClassBySpringCGLIB$$c5c1b018.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at com.haotian.blog.web.CommentController$$EnhancerBySpringCGLIB$$ddc67270.comments(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-01-31 18:27:36.801  INFO 66350 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-31 18:27:36.802  INFO 66350 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-01-31 18:27:36.805  INFO 66350 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-01-31 18:27:36.811  INFO 66350 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-01-31 18:27:42.884  INFO 67469 --- [main] com.haotian.blog.BlogApplication         : Starting BlogApplication using Java 1.8.0_275 on Haotians-MBP with PID 67469 (/Users/haotian/IdeaProjects/blog/target/classes started by haotian in /Users/haotian/IdeaProjects/blog)
+2021-01-31 18:27:42.886 DEBUG 67469 --- [main] com.haotian.blog.BlogApplication         : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-01-31 18:27:42.887  INFO 67469 --- [main] com.haotian.blog.BlogApplication         : The following profiles are active: dev
+2021-01-31 18:27:43.400  INFO 67469 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-31 18:27:43.454  INFO 67469 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 5 JPA repository interfaces.
+2021-01-31 18:27:43.915  INFO 67469 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-01-31 18:27:43.921  INFO 67469 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-31 18:27:43.921  INFO 67469 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-31 18:27:43.979  INFO 67469 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-31 18:27:43.979  INFO 67469 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1062 ms
+2021-01-31 18:27:44.098  INFO 67469 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-31 18:27:44.178  INFO 67469 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-01-31 18:27:44.263  INFO 67469 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-01-31 18:27:44.319  INFO 67469 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-01-31 18:27:44.423  INFO 67469 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-01-31 18:27:44.435  INFO 67469 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-01-31 18:27:44.904  INFO 67469 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-31 18:27:44.910  INFO 67469 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-31 18:27:45.570  WARN 67469 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-31 18:27:45.706  INFO 67469 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-31 18:27:45.788  INFO 67469 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-01-31 18:27:45.982  INFO 67469 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-31 18:27:45.989  INFO 67469 --- [main] com.haotian.blog.BlogApplication         : Started BlogApplication in 3.458 seconds (JVM running for 3.939)
+2021-01-31 18:27:49.580  INFO 67469 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-31 18:27:49.580  INFO 67469 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-31 18:27:49.581  INFO 67469 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-01-31 18:27:49.620  INFO 67469 --- [http-nio-8080-exec-1] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/blog/30', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.IndexController,blog', args=[30, {}]}
+2021-01-31 18:27:49.741  INFO 67469 --- [http-nio-8080-exec-1] com.haotian.blog.aspect.LogAspect        : Result : blog
+2021-01-31 18:28:00.054  INFO 67469 --- [http-nio-8080-exec-3] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.CommentController,post', args=[Comment{id=null, nickname='Haotian', email='haotian@test.com', content='Test comment', avatar='null', createTime=null}]}
+2021-01-31 18:28:00.107  INFO 67469 --- [http-nio-8080-exec-3] com.haotian.blog.aspect.LogAspect        : Result : redirect:/comments/30
+2021-01-31 18:28:00.124  INFO 67469 --- [http-nio-8080-exec-6] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/comments/30', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.CommentController,comments', args=[30, {}]}
+2021-01-31 18:28:00.151  INFO 67469 --- [http-nio-8080-exec-6] com.haotian.blog.aspect.LogAspect        : Result : blog :: commentList
+2021-01-31 18:28:55.627  INFO 67469 --- [http-nio-8080-exec-4] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.CommentController,post', args=[Comment{id=null, nickname='Xu', email='xu@test.com', content='Test reply', avatar='null', createTime=null}]}
+2021-01-31 18:28:55.641  INFO 67469 --- [http-nio-8080-exec-4] com.haotian.blog.aspect.LogAspect        : Result : redirect:/comments/30
+2021-01-31 18:28:55.645  INFO 67469 --- [http-nio-8080-exec-10] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/comments/30', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.CommentController,comments', args=[30, {}]}
+2021-01-31 18:28:55.650  INFO 67469 --- [http-nio-8080-exec-10] com.haotian.blog.aspect.LogAspect        : Result : blog :: commentList
+2021-01-31 18:30:40.167  INFO 67469 --- [http-nio-8080-exec-6] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/blog/30', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.IndexController,blog', args=[30, {}]}
+2021-01-31 18:30:40.173  INFO 67469 --- [http-nio-8080-exec-6] com.haotian.blog.aspect.LogAspect        : Result : blog
+2021-01-31 18:45:50.208  WARN 67469 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m25s499ms).
+2021-01-31 19:01:18.588  WARN 67469 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m58s377ms).
+2021-01-31 19:03:06.763  INFO 67469 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-31 19:03:06.764  INFO 67469 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-01-31 19:03:06.767  INFO 67469 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-01-31 19:03:06.773  INFO 67469 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-01-31 19:03:14.522  INFO 75313 --- [main] com.haotian.blog.BlogApplication         : Starting BlogApplication using Java 1.8.0_275 on Haotians-MBP with PID 75313 (/Users/haotian/IdeaProjects/blog/target/classes started by haotian in /Users/haotian/IdeaProjects/blog)
+2021-01-31 19:03:14.524 DEBUG 75313 --- [main] com.haotian.blog.BlogApplication         : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-01-31 19:03:14.525  INFO 75313 --- [main] com.haotian.blog.BlogApplication         : The following profiles are active: dev
+2021-01-31 19:03:15.091  INFO 75313 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-31 19:03:15.149  INFO 75313 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 5 JPA repository interfaces.
+2021-01-31 19:03:15.642  INFO 75313 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-01-31 19:03:15.647  INFO 75313 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-31 19:03:15.648  INFO 75313 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-31 19:03:15.706  INFO 75313 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-31 19:03:15.706  INFO 75313 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1148 ms
+2021-01-31 19:03:15.854  INFO 75313 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-31 19:03:15.925  INFO 75313 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-01-31 19:03:16.017  INFO 75313 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-01-31 19:03:16.117  INFO 75313 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-01-31 19:03:16.251  INFO 75313 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-01-31 19:03:16.265  INFO 75313 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-01-31 19:03:16.906  INFO 75313 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-31 19:03:16.912  INFO 75313 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-31 19:03:17.709  WARN 75313 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-31 19:03:17.918  INFO 75313 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-31 19:03:18.065  INFO 75313 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-01-31 19:03:18.424  INFO 75313 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-31 19:03:18.437  INFO 75313 --- [main] com.haotian.blog.BlogApplication         : Started BlogApplication in 4.293 seconds (JVM running for 4.834)
+2021-01-31 19:03:21.740  INFO 75313 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-31 19:03:21.740  INFO 75313 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-31 19:03:21.741  INFO 75313 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-01-31 19:03:21.776  INFO 75313 --- [http-nio-8080-exec-1] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/blog/30', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.IndexController,blog', args=[30, {}]}
+2021-01-31 19:03:21.898  INFO 75313 --- [http-nio-8080-exec-1] com.haotian.blog.aspect.LogAspect        : Result : blog
+2021-01-31 19:03:22.855  INFO 75313 --- [http-nio-8080-exec-3] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/comments/30', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.CommentController,comments', args=[30, {}]}
+2021-01-31 19:03:22.897  INFO 75313 --- [http-nio-8080-exec-3] com.haotian.blog.aspect.LogAspect        : Result : blog :: commentList
+2021-01-31 19:03:33.204  INFO 75313 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-31 19:03:33.206  INFO 75313 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-01-31 19:03:33.208  INFO 75313 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-01-31 19:03:33.213  INFO 75313 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-01-31 19:26:18.274  INFO 85302 --- [main] com.haotian.blog.BlogApplication         : Starting BlogApplication using Java 1.8.0_275 on Haotians-MBP with PID 85302 (/Users/haotian/IdeaProjects/blog/target/classes started by haotian in /Users/haotian/IdeaProjects/blog)
+2021-01-31 19:26:18.275 DEBUG 85302 --- [main] com.haotian.blog.BlogApplication         : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-01-31 19:26:18.276  INFO 85302 --- [main] com.haotian.blog.BlogApplication         : The following profiles are active: dev
+2021-01-31 19:26:18.775  INFO 85302 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-31 19:26:18.825  INFO 85302 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 5 JPA repository interfaces.
+2021-01-31 19:26:19.292  INFO 85302 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-01-31 19:26:19.297  INFO 85302 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-31 19:26:19.298  INFO 85302 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-31 19:26:19.358  INFO 85302 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-31 19:26:19.359  INFO 85302 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1054 ms
+2021-01-31 19:26:19.518  INFO 85302 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-31 19:26:19.611  INFO 85302 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-01-31 19:26:19.696  INFO 85302 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-01-31 19:26:19.771  INFO 85302 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-01-31 19:26:19.898  INFO 85302 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-01-31 19:26:19.912  INFO 85302 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-01-31 19:26:20.430  INFO 85302 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-31 19:26:20.436  INFO 85302 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-31 19:26:21.111  WARN 85302 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-31 19:26:21.237  INFO 85302 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-31 19:26:21.318  INFO 85302 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-01-31 19:26:21.534  INFO 85302 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-31 19:26:21.543  INFO 85302 --- [main] com.haotian.blog.BlogApplication         : Started BlogApplication in 3.605 seconds (JVM running for 4.104)
+2021-01-31 19:26:27.983  INFO 85302 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-31 19:26:27.983  INFO 85302 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-31 19:26:27.984  INFO 85302 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-01-31 19:26:28.019  INFO 85302 --- [http-nio-8080-exec-1] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/blog/30', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.IndexController,blog', args=[30, {}]}
+2021-01-31 19:26:28.121  INFO 85302 --- [http-nio-8080-exec-1] com.haotian.blog.aspect.LogAspect        : Result : blog
+2021-01-31 19:26:29.263  INFO 85302 --- [http-nio-8080-exec-6] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/comments/30', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.CommentController,comments', args=[30, {}]}
+2021-01-31 19:26:29.316  INFO 85302 --- [http-nio-8080-exec-6] com.haotian.blog.aspect.LogAspect        : Result : blog :: commentList
+2021-01-31 19:27:28.233  INFO 85302 --- [http-nio-8080-exec-3] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/blog/30', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.IndexController,blog', args=[30, {}]}
+2021-01-31 19:27:28.239  INFO 85302 --- [http-nio-8080-exec-3] com.haotian.blog.aspect.LogAspect        : Result : blog
+2021-01-31 19:27:28.739  INFO 85302 --- [http-nio-8080-exec-4] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/comments/30', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.CommentController,comments', args=[30, {}]}
+2021-01-31 19:27:28.749  INFO 85302 --- [http-nio-8080-exec-4] com.haotian.blog.aspect.LogAspect        : Result : blog :: commentList
+2021-01-31 19:27:39.934  INFO 85302 --- [http-nio-8080-exec-2] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.CommentController,post', args=[Comment{id=null, nickname='John', email='john@test.com', content='Hi Haotian', avatar='null', createTime=null}]}
+2021-01-31 19:27:39.977  INFO 85302 --- [http-nio-8080-exec-2] com.haotian.blog.aspect.LogAspect        : Result : redirect:/comments/30
+2021-01-31 19:27:39.991  INFO 85302 --- [http-nio-8080-exec-10] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/comments/30', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.CommentController,comments', args=[30, {}]}
+2021-01-31 19:27:40.003  INFO 85302 --- [http-nio-8080-exec-10] com.haotian.blog.aspect.LogAspect        : Result : blog :: commentList
+2021-01-31 19:29:02.593  INFO 85302 --- [http-nio-8080-exec-9] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.CommentController,post', args=[Comment{id=null, nickname='haotian', email='haotian@test.com', content='Hi John', avatar='null', createTime=null}]}
+2021-01-31 19:29:02.607  INFO 85302 --- [http-nio-8080-exec-9] com.haotian.blog.aspect.LogAspect        : Result : redirect:/comments/30
+2021-01-31 19:29:02.613  INFO 85302 --- [http-nio-8080-exec-4] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/comments/30', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.CommentController,comments', args=[30, {}]}
+2021-01-31 19:29:02.623  INFO 85302 --- [http-nio-8080-exec-4] com.haotian.blog.aspect.LogAspect        : Result : blog :: commentList
+2021-01-31 19:32:11.812  INFO 85302 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-31 19:32:11.813  INFO 85302 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-01-31 19:32:11.815  INFO 85302 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-01-31 19:32:11.821  INFO 85302 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-01-31 19:32:18.616  INFO 87959 --- [main] com.haotian.blog.BlogApplication         : Starting BlogApplication using Java 1.8.0_275 on Haotians-MBP with PID 87959 (/Users/haotian/IdeaProjects/blog/target/classes started by haotian in /Users/haotian/IdeaProjects/blog)
+2021-01-31 19:32:18.619 DEBUG 87959 --- [main] com.haotian.blog.BlogApplication         : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-01-31 19:32:18.620  INFO 87959 --- [main] com.haotian.blog.BlogApplication         : The following profiles are active: dev
+2021-01-31 19:32:19.157  INFO 87959 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-31 19:32:19.210  INFO 87959 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 5 JPA repository interfaces.
+2021-01-31 19:32:19.840  INFO 87959 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-01-31 19:32:19.847  INFO 87959 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-31 19:32:19.847  INFO 87959 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-31 19:32:19.920  INFO 87959 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-31 19:32:19.921  INFO 87959 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1259 ms
+2021-01-31 19:32:20.029  INFO 87959 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-31 19:32:20.097  INFO 87959 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-01-31 19:32:20.168  INFO 87959 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-01-31 19:32:20.221  INFO 87959 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-01-31 19:32:20.316  INFO 87959 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-01-31 19:32:20.328  INFO 87959 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-01-31 19:32:20.794  INFO 87959 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-31 19:32:20.799  INFO 87959 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-31 19:32:21.445  WARN 87959 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-31 19:32:21.568  INFO 87959 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-31 19:32:21.646  INFO 87959 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-01-31 19:32:21.834  INFO 87959 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-31 19:32:21.840  INFO 87959 --- [main] com.haotian.blog.BlogApplication         : Started BlogApplication in 3.867 seconds (JVM running for 4.346)
+2021-01-31 19:32:23.761  INFO 87959 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-31 19:32:23.761  INFO 87959 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-31 19:32:23.763  INFO 87959 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-01-31 19:32:23.802  INFO 87959 --- [http-nio-8080-exec-1] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/blog/30', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.IndexController,blog', args=[30, {}]}
+2021-01-31 19:32:23.913  INFO 87959 --- [http-nio-8080-exec-1] com.haotian.blog.aspect.LogAspect        : Result : blog
+2021-01-31 19:32:24.998  INFO 87959 --- [http-nio-8080-exec-5] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/comments/30', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.CommentController,comments', args=[30, {}]}
+2021-01-31 19:32:25.049  INFO 87959 --- [http-nio-8080-exec-5] com.haotian.blog.aspect.LogAspect        : Result : blog :: commentList
+2021-01-31 19:44:27.497  INFO 87959 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-31 19:44:27.499  INFO 87959 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-01-31 19:44:27.502  INFO 87959 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-01-31 19:44:27.508  INFO 87959 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-01-31 19:44:35.255  INFO 93294 --- [main] com.haotian.blog.BlogApplication         : Starting BlogApplication using Java 1.8.0_275 on Haotians-MBP with PID 93294 (/Users/haotian/IdeaProjects/blog/target/classes started by haotian in /Users/haotian/IdeaProjects/blog)
+2021-01-31 19:44:35.258 DEBUG 93294 --- [main] com.haotian.blog.BlogApplication         : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-01-31 19:44:35.258  INFO 93294 --- [main] com.haotian.blog.BlogApplication         : The following profiles are active: dev
+2021-01-31 19:44:36.058  INFO 93294 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-31 19:44:36.244  INFO 93294 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 158 ms. Found 5 JPA repository interfaces.
+2021-01-31 19:44:36.857  INFO 93294 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-01-31 19:44:36.862  INFO 93294 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-31 19:44:36.862  INFO 93294 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-31 19:44:36.921  INFO 93294 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-31 19:44:36.921  INFO 93294 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1596 ms
+2021-01-31 19:44:37.039  INFO 93294 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-31 19:44:37.148  INFO 93294 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-01-31 19:44:37.264  INFO 93294 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-01-31 19:44:37.339  INFO 93294 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-01-31 19:44:37.450  INFO 93294 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-01-31 19:44:37.462  INFO 93294 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-01-31 19:44:38.166  INFO 93294 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-31 19:44:38.175  INFO 93294 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-31 19:44:39.102  WARN 93294 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-31 19:44:39.274  INFO 93294 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-31 19:44:39.358  INFO 93294 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-01-31 19:44:39.548  INFO 93294 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-31 19:44:39.555  INFO 93294 --- [main] com.haotian.blog.BlogApplication         : Started BlogApplication in 4.829 seconds (JVM running for 5.562)
+2021-01-31 19:44:40.095  INFO 93294 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-31 19:44:40.095  INFO 93294 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-31 19:44:40.096  INFO 93294 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-01-31 19:44:40.129  INFO 93294 --- [http-nio-8080-exec-1] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/blog/30', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.IndexController,blog', args=[30, {}]}
+2021-01-31 19:44:40.271  INFO 93294 --- [http-nio-8080-exec-1] com.haotian.blog.aspect.LogAspect        : Result : blog
+2021-01-31 19:44:41.264  INFO 93294 --- [http-nio-8080-exec-6] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/comments/30', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.CommentController,comments', args=[30, {}]}
+2021-01-31 19:44:41.321  INFO 93294 --- [http-nio-8080-exec-6] com.haotian.blog.aspect.LogAspect        : Result : blog :: commentList
+2021-01-31 19:44:58.904  INFO 93294 --- [http-nio-8080-exec-3] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.IndexController,index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2021-01-31 19:44:58.916  WARN 93294 --- [http-nio-8080-exec-3] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-01-31 19:44:58.926  WARN 93294 --- [http-nio-8080-exec-3] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-01-31 19:44:58.931  INFO 93294 --- [http-nio-8080-exec-3] com.haotian.blog.aspect.LogAspect        : Result : index
+2021-01-31 19:45:00.375  INFO 93294 --- [http-nio-8080-exec-5] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/blog/29', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.IndexController,blog', args=[29, {}]}
+2021-01-31 19:45:00.395  INFO 93294 --- [http-nio-8080-exec-5] com.haotian.blog.aspect.LogAspect        : Result : blog
+2021-01-31 19:45:00.949  INFO 93294 --- [http-nio-8080-exec-1] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/comments/29', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.CommentController,comments', args=[29, {}]}
+2021-01-31 19:45:00.953  INFO 93294 --- [http-nio-8080-exec-1] com.haotian.blog.aspect.LogAspect        : Result : blog :: commentList
+2021-01-31 19:45:03.343  INFO 93294 --- [http-nio-8080-exec-4] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/blog/30', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.IndexController,blog', args=[30, {}]}
+2021-01-31 19:45:03.347  INFO 93294 --- [http-nio-8080-exec-4] com.haotian.blog.aspect.LogAspect        : Result : blog
+2021-01-31 19:45:04.005  INFO 93294 --- [http-nio-8080-exec-9] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/comments/30', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.CommentController,comments', args=[30, {}]}
+2021-01-31 19:45:04.023  INFO 93294 --- [http-nio-8080-exec-9] com.haotian.blog.aspect.LogAspect        : Result : blog :: commentList
+2021-01-31 19:45:16.686  INFO 93294 --- [http-nio-8080-exec-3] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.CommentController,post', args=[Comment{id=null, nickname='xuhaotian', email='xuhaotian@foxmail.com', content='Admin test', avatar='null', createTime=null, blog=blog{id=30, title='null', content='null', firstPicture='null', flag='null', views=null, donation=false, shareStatement=false, comment=false, published=false, recommend=false, createTime=null, updateTime=null, type=null, tags=[], user=null, comments=[], tagIds='null', description='null'}, replyComments=[], parentComment=Comment{id=-1, nickname='null', email='null', content='null', avatar='null', createTime=null, blog=null, replyComments=[], parentComment=null, adminComment=false}, adminComment=false}, org.apache.catalina.session.StandardSessionFacade@1517f5af]}
+2021-01-31 19:45:16.731  INFO 93294 --- [http-nio-8080-exec-3] com.haotian.blog.aspect.LogAspect        : Result : redirect:/comments/30
+2021-01-31 19:45:16.748  INFO 93294 --- [http-nio-8080-exec-2] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/comments/30', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.CommentController,comments', args=[30, {}]}
+2021-01-31 19:45:16.761  INFO 93294 --- [http-nio-8080-exec-2] com.haotian.blog.aspect.LogAspect        : Result : blog :: commentList
+2021-01-31 19:45:32.669  INFO 93294 --- [http-nio-8080-exec-10] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.CommentController,post', args=[Comment{id=null, nickname='xuhaotian', email='xuhaotian@foxmail.com', content='Test admin reply', avatar='null', createTime=null, blog=blog{id=30, title='null', content='null', firstPicture='null', flag='null', views=null, donation=false, shareStatement=false, comment=false, published=false, recommend=false, createTime=null, updateTime=null, type=null, tags=[], user=null, comments=[], tagIds='null', description='null'}, replyComments=[], parentComment=Comment{id=35, nickname='null', email='null', content='null', avatar='null', createTime=null, blog=null, replyComments=[], parentComment=null, adminComment=false}, adminComment=false}, org.apache.catalina.session.StandardSessionFacade@1517f5af]}
+2021-01-31 19:45:32.681  INFO 93294 --- [http-nio-8080-exec-10] com.haotian.blog.aspect.LogAspect        : Result : redirect:/comments/30
+2021-01-31 19:45:32.686  INFO 93294 --- [http-nio-8080-exec-5] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/comments/30', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.CommentController,comments', args=[30, {}]}
+2021-01-31 19:45:32.700  INFO 93294 --- [http-nio-8080-exec-5] com.haotian.blog.aspect.LogAspect        : Result : blog :: commentList
+2021-01-31 19:49:10.638  INFO 93294 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-31 19:49:10.640  INFO 93294 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-01-31 19:49:10.642  INFO 93294 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-01-31 19:49:10.646  INFO 93294 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-01-31 19:50:01.576  INFO 95714 --- [main] com.haotian.blog.BlogApplication         : Starting BlogApplication using Java 1.8.0_275 on Haotians-MBP with PID 95714 (/Users/haotian/IdeaProjects/blog/target/classes started by haotian in /Users/haotian/IdeaProjects/blog)
+2021-01-31 19:50:01.578 DEBUG 95714 --- [main] com.haotian.blog.BlogApplication         : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-01-31 19:50:01.578  INFO 95714 --- [main] com.haotian.blog.BlogApplication         : The following profiles are active: dev
+2021-01-31 19:50:02.069  INFO 95714 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-31 19:50:02.121  INFO 95714 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 5 JPA repository interfaces.
+2021-01-31 19:50:02.664  INFO 95714 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-01-31 19:50:02.673  INFO 95714 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-31 19:50:02.674  INFO 95714 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-31 19:50:02.743  INFO 95714 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-31 19:50:02.743  INFO 95714 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1136 ms
+2021-01-31 19:50:02.916  INFO 95714 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-31 19:50:02.951  INFO 95714 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-01-31 19:50:03.066  INFO 95714 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-01-31 19:50:03.126  INFO 95714 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-01-31 19:50:03.242  INFO 95714 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-01-31 19:50:03.254  INFO 95714 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-01-31 19:50:03.731  INFO 95714 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-31 19:50:03.737  INFO 95714 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-31 19:50:04.675  WARN 95714 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-31 19:50:04.828  INFO 95714 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-31 19:50:04.924  INFO 95714 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-01-31 19:50:05.233  INFO 95714 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-31 19:50:05.243  INFO 95714 --- [main] com.haotian.blog.BlogApplication         : Started BlogApplication in 3.998 seconds (JVM running for 4.436)
+2021-01-31 19:50:18.358  INFO 95714 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-31 19:50:18.358  INFO 95714 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-31 19:50:18.360  INFO 95714 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-01-31 19:50:18.393  INFO 95714 --- [http-nio-8080-exec-1] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/blog/30', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.IndexController,blog', args=[30, {}]}
+2021-01-31 19:50:18.675  INFO 95714 --- [http-nio-8080-exec-1] com.haotian.blog.aspect.LogAspect        : Result : blog
+2021-01-31 19:50:19.792  INFO 95714 --- [http-nio-8080-exec-6] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/comments/30', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.CommentController,comments', args=[30, {}]}
+2021-01-31 19:50:19.842  INFO 95714 --- [http-nio-8080-exec-6] com.haotian.blog.aspect.LogAspect        : Result : blog :: commentList
+2021-01-31 19:50:24.688  INFO 95714 --- [http-nio-8080-exec-3] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/blog/30', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.IndexController,blog', args=[30, {}]}
+2021-01-31 19:50:24.694  INFO 95714 --- [http-nio-8080-exec-3] com.haotian.blog.aspect.LogAspect        : Result : blog
+2021-01-31 19:50:25.240  INFO 95714 --- [http-nio-8080-exec-9] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/comments/30', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.CommentController,comments', args=[30, {}]}
+2021-01-31 19:50:25.257  INFO 95714 --- [http-nio-8080-exec-9] com.haotian.blog.aspect.LogAspect        : Result : blog :: commentList
+2021-01-31 19:50:28.368  INFO 95714 --- [http-nio-8080-exec-5] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/blog/30', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.IndexController,blog', args=[30, {}]}
+2021-01-31 19:50:28.384  INFO 95714 --- [http-nio-8080-exec-5] com.haotian.blog.aspect.LogAspect        : Result : blog
+2021-01-31 19:50:28.886  INFO 95714 --- [http-nio-8080-exec-1] com.haotian.blog.aspect.LogAspect        : Request : {url='http://localhost:8080/comments/30', ip='0:0:0:0:0:0:0:1', classMethod='com.haotian.blog.web.CommentController,comments', args=[30, {}]}
+2021-01-31 19:50:28.902  INFO 95714 --- [http-nio-8080-exec-1] com.haotian.blog.aspect.LogAspect        : Result : blog :: commentList
