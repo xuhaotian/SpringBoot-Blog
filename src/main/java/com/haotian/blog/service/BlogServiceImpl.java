@@ -4,6 +4,7 @@ import com.haotian.blog.NotFoundException;
 import com.haotian.blog.dao.BlogRepository;
 import com.haotian.blog.po.Blog;
 import com.haotian.blog.po.Type;
+import com.haotian.blog.util.MarkdownUtils;
 import com.haotian.blog.util.MyBeanUtils;
 import com.haotian.blog.vo.BlogQuery;
 import org.springframework.beans.BeanUtils;
@@ -34,6 +35,19 @@ public class BlogServiceImpl implements BlogService {
     public Blog getBlog(Long id) {
         return blogRepository.findById(id).orElse(null);
         //after spring 2.x, findOne is disabled
+    }
+
+    @Override
+    public Blog getAndConvert(Long id) {
+        Blog blog = blogRepository.findById(id).orElse(null);
+        if (blog == null){
+            throw new NotFoundException("Blog not exist");
+        }
+        Blog b = new Blog();
+        BeanUtils.copyProperties(blog,b);
+        String content = b.getContent();
+        b.setContent(MarkdownUtils.markdownToHtmlExtensions(content));
+        return b;
     }
 
     @Override
