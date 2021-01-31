@@ -169,10 +169,10 @@
 			}
             
 			var tabBoxs = tab.find("." + classPrefix + "tab-box");
-            var emojiCategories = ["github-emoji", "twemoji", "font-awesome", logoPrefix];
+            var emojitypes = ["github-emoji", "twemoji", "font-awesome", logoPrefix];
 
 			var drawTable = function() {
-                var cname = emojiCategories[emojiTabIndex];
+                var cname = emojitypes[emojiTabIndex];
 				var $data = emojiData[cname];
                 var $tab  = tabBoxs.eq(emojiTabIndex);
 

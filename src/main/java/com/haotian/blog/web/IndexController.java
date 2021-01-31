@@ -51,9 +51,9 @@ public class IndexController {
         return "blog";
     }
 
-    @GetMapping("/categories")
-    public String categories() {
-        return "categories";
+    @GetMapping("/types")
+    public String types() {
+        return "types";
     }
 
     @GetMapping("/tags")

@@ -20,11 +20,11 @@
         <!--menu item-->
         <div class="ui inverted secondary stackable menu">
             <h2 class="ui teal header item">Blog</h2>
-            <a href="/" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class="small home icon"></i>Home</a>
-            <a href="categories" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i class="small idea icon"></i>Categories</a>
-            <a href="tags" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i class="small tags icon"></i>Tags</a>
-            <a href="archives" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'"><i class="small clone icon"></i>Archive</a>
-            <a href="about" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'"><i class="small info icon"></i>About</a>
+            <a href="/" th:href="@{/}" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class="small home icon"></i>Home</a>
+            <a href="types" th:href="@{/types/-1}" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i class="small idea icon"></i>Types</a>
+            <a href="tags" th:href="@{/tags/-1}" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i class="small tags icon"></i>Tags</a>
+            <a href="archives" th:href="@{/archives}" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'"><i class="small clone icon"></i>Archive</a>
+            <a href="about" th:href="@{/about}" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'"><i class="small info icon"></i>About</a>
             <!--search bar-->
             <div class="right item m-mobile-hide">
                 <form name="search" action="#" th:action="@{/search}" method="post" target="_blank">
